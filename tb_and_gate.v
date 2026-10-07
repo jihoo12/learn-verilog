@@ -26,4 +26,9 @@ initial begin
     $monitor("time=%0t a=%b b=%b y=%b", $time, a, b, y);
 end
 
+initial begin
+    $dumpfile("wave.vcd");
+    $dumpvars(0, tb_and_gate);
+end
+
 endmodule
